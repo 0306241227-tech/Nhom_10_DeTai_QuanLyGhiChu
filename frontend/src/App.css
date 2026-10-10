@@ -1,0 +1,121 @@
+/* Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #1e293b;
+  color: #fff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar.dark {
+  background: #0f172a;
+}
+
+.sidebar-header h2 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.user-name {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background: #334155;
+  color: #fff;
+}
+
+.nav-link.active {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+  background: #f8fafc;
+}
+
+.app-layout.dark .main-content {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+/* Settings */
+.settings-page h1 {
+  margin-bottom: 24px;
+}
+
+.settings-form {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.message.success {
+  color: #16a34a;
+  margin-top: 12px;
+}
+
+.message.error {
+  color: #dc2626;
+  margin-top: 12px;
+}
