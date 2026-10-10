@@ -22,6 +22,9 @@ export default function Sidebar() {
           🔒 Vùng kín
         </NavLink>
       </nav>
+      <NavLink to="/notes" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+  📝 Ghi chú
+</NavLink>
     </aside>
   );
 }

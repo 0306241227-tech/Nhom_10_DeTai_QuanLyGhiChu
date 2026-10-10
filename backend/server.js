@@ -17,9 +17,11 @@ const dataDir = path.join(__dirname, 'data');
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir);
 }
+const notesRoutes = require('./routes/notes');
 
 // Routes
 app.use('/api/profile', profileRoutes);
+app.use('/api/notes', notesRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Note Management API is running' });
