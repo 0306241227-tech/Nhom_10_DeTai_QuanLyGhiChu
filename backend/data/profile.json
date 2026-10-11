@@ -1,6 +1,6 @@
 {
   "displayName": "Người dùng",
-  "theme": "light",
+  "theme": "dark",
   "primaryColor": "#3b82f6",
-  "privatePasswordHash": ""
+  "privatePasswordHash": "$2a$10$99KBPnKR2w2C7.Efr93nkOKdPQnzYC3DcRsOiFDQ/LhxE/FxDzxUS"
 }

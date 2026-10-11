@@ -18,6 +18,8 @@ if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir);
 }
 const notesRoutes = require('./routes/notes');
+const privateRoutes = require('./routes/private');
+app.use('/api/private', privateRoutes);
 
 // Routes
 app.use('/api/profile', profileRoutes);
