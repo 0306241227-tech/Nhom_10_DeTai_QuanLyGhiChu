@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Settings from './pages/Settings';
 import Private from './pages/Private';
-import Notes from './pages/Notes';   // ← thêm dòng này
+import Notes from './pages/Notes';   
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="notes" element={<Notes />} />   {/* ← thêm */}
+            <Route path="notes" element={<Notes />} />  
             <Route path="settings" element={<Settings />} />
             <Route path="private" element={<Private />} />
           </Route>

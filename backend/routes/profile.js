@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 const router = express.Router();
 const PROFILE_PATH = path.join(__dirname, '../data/profile.json');
 
-// Đọc profile
+
 router.get('/', (req, res) => {
   try {
     if (!fs.existsSync(PROFILE_PATH)) {
@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
   }
 });
 
-// Cập nhật profile
+
 router.put('/', async (req, res) => {
   try {
     const { displayName, theme, primaryColor, password } = req.body;
@@ -41,7 +41,7 @@ router.put('/', async (req, res) => {
     if (theme !== undefined) currentData.theme = theme;
     if (primaryColor !== undefined) currentData.primaryColor = primaryColor;
 
-    // Chỉ hash khi người dùng nhập mật khẩu mới
+    
     if (password && password.trim() !== '') {
       currentData.privatePasswordHash = await bcrypt.hash(password, 10);
     }

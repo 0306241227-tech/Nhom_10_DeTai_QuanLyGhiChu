@@ -8,11 +8,10 @@ const profileRoutes = require('./routes/profile');
 const app = express();
 const PORT = 3001;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Tạo thư mục data nếu chưa có
+
 const dataDir = path.join(__dirname, 'data');
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir);
@@ -21,7 +20,7 @@ const notesRoutes = require('./routes/notes');
 const privateRoutes = require('./routes/private');
 app.use('/api/private', privateRoutes);
 
-// Routes
+
 app.use('/api/profile', profileRoutes);
 app.use('/api/notes', notesRoutes);
 

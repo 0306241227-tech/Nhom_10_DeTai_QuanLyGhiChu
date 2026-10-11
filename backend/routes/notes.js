@@ -5,14 +5,14 @@ const path = require('path');
 const router = express.Router();
 const notesDir = path.join(__dirname, '..', 'data', 'notes');
 
-// Tạo thư mục nếu chưa có
+
 if (!fs.existsSync(notesDir)) {
   fs.mkdirSync(notesDir, { recursive: true });
 }
 
 const getFilePath = (topic) => path.join(notesDir, `${topic}.json`);
 
-// GET /api/notes/:topic  → Lấy danh sách ghi chú
+
 router.get('/:topic', (req, res) => {
   const filePath = getFilePath(req.params.topic);
   try {
@@ -24,7 +24,7 @@ router.get('/:topic', (req, res) => {
   }
 });
 
-// POST /api/notes/:topic  → Thêm mới
+
 router.post('/:topic', (req, res) => {
   const filePath = getFilePath(req.params.topic);
   try {
@@ -48,7 +48,7 @@ router.post('/:topic', (req, res) => {
   }
 });
 
-// PUT /api/notes/:topic/:id  → Sửa
+
 router.put('/:topic/:id', (req, res) => {
   const filePath = getFilePath(req.params.topic);
   try {
@@ -73,7 +73,7 @@ router.put('/:topic/:id', (req, res) => {
   }
 });
 
-// DELETE /api/notes/:topic/:id  → Xóa
+
 router.delete('/:topic/:id', (req, res) => {
   const filePath = getFilePath(req.params.topic);
   try {

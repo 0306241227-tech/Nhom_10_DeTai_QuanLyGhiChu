@@ -8,13 +8,12 @@ const router = express.Router();
 const PROFILE_PATH = path.join(__dirname, '../data/profile.json');
 const PRIVATE_PATH = path.join(__dirname, '../data/private.json');
 
-// Tạo file private.json nếu chưa có
+
 if (!fs.existsSync(PRIVATE_PATH)) {
   fs.writeFileSync(PRIVATE_PATH, '[]', 'utf8');
 }
 
-// ========== AUTH ==========
-// POST /api/private/auth
+
 router.post('/auth', async (req, res) => {
   try {
     const { password } = req.body;
@@ -46,8 +45,7 @@ router.post('/auth', async (req, res) => {
   }
 });
 
-// ========== CRUD PRIVATE NOTES ==========
-// GET /api/private/notes
+
 router.get('/notes', (req, res) => {
   try {
     if (!fs.existsSync(PRIVATE_PATH)) return res.json([]);
@@ -58,7 +56,7 @@ router.get('/notes', (req, res) => {
   }
 });
 
-// POST /api/private/notes
+
 router.post('/notes', (req, res) => {
   try {
     let notes = fs.existsSync(PRIVATE_PATH)
@@ -81,7 +79,7 @@ router.post('/notes', (req, res) => {
   }
 });
 
-// PUT /api/private/notes/:id
+
 router.put('/notes/:id', (req, res) => {
   try {
     let notes = JSON.parse(fs.readFileSync(PRIVATE_PATH, 'utf8'));
@@ -105,7 +103,7 @@ router.put('/notes/:id', (req, res) => {
   }
 });
 
-// DELETE /api/private/notes/:id
+
 router.delete('/notes/:id', (req, res) => {
   try {
     let notes = JSON.parse(fs.readFileSync(PRIVATE_PATH, 'utf8'));

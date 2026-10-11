@@ -41,7 +41,7 @@ export default function Settings() {
         password: form.password
       });
 
-      // Cập nhật Context ngay → giao diện đổi real-time
+      
       setDisplayName(form.displayName);
       setTheme(form.theme);
 

@@ -79,7 +79,7 @@ export default function Notes() {
     <div className="notes-page">
       <h1>Ghi chú công khai</h1>
 
-      {/* Chọn chủ đề */}
+      
       <div className="topic-select" style={{ marginBottom: 20 }}>
         <strong>Chủ đề: </strong>
         <select value={topic} onChange={(e) => setTopic(e.target.value)}>
@@ -89,7 +89,7 @@ export default function Notes() {
         </select>
       </div>
 
-      {/* Form thêm / sửa */}
+      
       <div className="note-form" style={{
         border: '1px solid #ccc',
         padding: 16,
@@ -117,7 +117,7 @@ export default function Notes() {
         )}
       </div>
 
-      {/* Danh sách ghi chú */}
+      
       {loading ? (
         <p>Đang tải...</p>
       ) : (
