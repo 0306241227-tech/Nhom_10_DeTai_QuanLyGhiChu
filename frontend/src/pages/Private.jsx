@@ -101,7 +101,7 @@ export default function Private() {
     setFormData({ id: null, title: '', content: '' });
   };
 
-  // ===== RENDER: CHƯA MỞ KHÓA =====
+  
   if (!isUnlocked) {
     return (
       <div className="private-page" style={{
@@ -111,7 +111,7 @@ export default function Private() {
         justifyContent: 'center',
         minHeight: '60vh'
       }}>
-        <h1>🔒 Vùng kín</h1>
+        <h1>🔒 Riêng tư</h1>
         <p style={{ marginBottom: 20, color: '#666' }}>
           Nhập mật khẩu để truy cập ghi chú riêng tư
         </p>
@@ -124,7 +124,7 @@ export default function Private() {
         }}>
           <input
             type="password"
-            placeholder="Mật khẩu vùng kín"
+            placeholder="Mật khẩu riêng tư"
             value={passwordInput}
             onChange={(e) => setPasswordInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleUnlock()}
@@ -157,7 +157,7 @@ export default function Private() {
     );
   }
 
-  // ===== RENDER: ĐÃ MỞ KHÓA =====
+  
   return (
     <div className="private-page">
       <h1>🔒 Ghi chú riêng tư</h1>
@@ -165,7 +165,7 @@ export default function Private() {
         Dữ liệu này được bảo vệ bằng mật khẩu
       </p>
 
-      {/* Form thêm / sửa */}
+      
       <div style={{
         border: '1px solid #ccc',
         padding: 16,
@@ -191,7 +191,7 @@ export default function Private() {
         {formData.id && <button onClick={handleCancel}>Hủy</button>}
       </div>
 
-      {/* Danh sách */}
+      
       {loading ? (
         <p>Đang tải...</p>
       ) : (

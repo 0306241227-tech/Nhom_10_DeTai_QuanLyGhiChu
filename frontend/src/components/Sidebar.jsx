@@ -19,7 +19,7 @@ export default function Sidebar() {
           ⚙️ Cài đặt
         </NavLink>
         <NavLink to="/private" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-          🔒 Vùng kín
+          🔒 riêng tư
         </NavLink>
       </nav>
       <NavLink to="/notes" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>

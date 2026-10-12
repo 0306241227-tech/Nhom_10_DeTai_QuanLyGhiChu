@@ -80,7 +80,7 @@ export default function Settings() {
         </div>
 
         <div className="form-group">
-          <label>Mật khẩu vùng riêng tư</label>
+          <label>Mật khẩu riêng tư</label>
           <input
             type="password"
             name="password"
