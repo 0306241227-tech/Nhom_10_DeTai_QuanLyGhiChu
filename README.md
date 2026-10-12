@@ -41,4 +41,7 @@ Web không yêu cầu đăng nhập tài khoản.
 Để xem khu vực Ghi chú riêng tư, vui lòng vào menu "Cài đặt" để tạo mật khẩu mới.
 link figma
 https://www.figma.com/design/7neAuVPZ5X8pn8V3y8YnEn/0306241230-0306241227-0306241193-0306241178_FONTEND?node-id=0-1&m=dev&t=w6lfVSvDgmNENkGW-1
+Link Trello 
+https://trello.com/invite/b/6acc4b9a7aeb33af15b29b29/ATTI295084db752154ce494ec20878fc4fcb5A7458B7/dồ-an-lập-trinh-front-end
+
 
