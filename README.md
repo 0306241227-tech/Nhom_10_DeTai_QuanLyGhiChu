@@ -24,9 +24,9 @@ Dự án chia 2 phần chạy độc lập. Mở **2 cửa sổ Terminal** để
 
 ### Bước 1: Khởi động Backend (Máy chủ API)
 
-```bash
-cd backend
-npm install
+
+cd backend 
+npm install express
 node server.js
 Lưu ý: Backend sẽ chạy tại http://localhost:3001. Hệ thống sẽ tự động sinh thư mục data/ chứa các file JSON. Vui lòng không xóa thư mục này khi đang chạy ứng dụng.
 Bước 2: Khởi động Frontend (Giao diện)
