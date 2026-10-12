@@ -196,7 +196,7 @@ export default function Private() {
         <p>Đang tải...</p>
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-          {notes.length === 0 && <p>Chưa có ghi chú kín nào.</p>}
+          {notes.length === 0 && <p>Chưa có ghi chú riêng tư nào.</p>}
           {notes.map((note) => (
             <div
               key={note.id}
